@@ -20,23 +20,28 @@ class SignInPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-         const Text(
-             'Sign In',
-           textAlign: TextAlign.center,
-           style: TextStyle(
-             fontSize: 32.0,
-             fontWeight: FontWeight.w600
-           ),
-         ),
-          const SizedBox(height: 8.0,),
+          const Text(
+            'Sign In',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(
+            height: 8.0,
+          ),
           ElevatedButton(
             onPressed: _signInWithGoogle,
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(16.0))
+                ) 
             ),
-            child: const Text(
-                'Sign In With Google',
-              style: TextStyle(color: Colors.black87, fontSize: 15.0),
+            child:const Text(
+              'Sign In With Google',
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 15.0
+            ),
             ),
           ),
         ],
@@ -44,7 +49,7 @@ class SignInPage extends StatelessWidget {
     );
   }
 
-  void _signInWithGoogle () {
+  void _signInWithGoogle() {
     // TODO: Auth with Google
   }
 }
