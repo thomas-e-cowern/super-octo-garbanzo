@@ -29,11 +29,15 @@ class SignInPage extends StatelessWidget {
          ),
           const SizedBox(height: 8.0,),
           ElevatedButton(
-            onPressed: () { print('pressed'); },
+            onPressed: _signInWithGoogle,
             child: const Text('Sign In With Google'),
           ),
         ],
       ),
     );
+  }
+
+  void _signInWithGoogle () {
+
   }
 }
