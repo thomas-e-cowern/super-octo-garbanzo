@@ -28,28 +28,17 @@ class SignInPage extends StatelessWidget {
             style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.w600),
           ),
           const SizedBox(
-            height: 8.0,
-          ),
-          ElevatedButton(
-            onPressed: _signInWithGoogle,
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(4.0))
-                )
-            ),
-            child:const Text(
-              'Sign In With Google',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 15.0
-            ),
-            ),
-          ),
-          SizedBox(
             height: 8,
           ),
-          CustomElevatedButton()
+          CustomElevatedButton(
+            color: Colors.white,
+            borderRadius: 4.0,
+            onPressed: () {},
+            child: const Text(
+              'Sign In With Facebook',
+              style: TextStyle(color: Colors.black87, fontSize: 15.0),
+            ),
+          )
         ],
       ),
     );

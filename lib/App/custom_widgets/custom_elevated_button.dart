@@ -1,25 +1,32 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({Key? key}) : super(key: key);
+  const CustomElevatedButton({
+    Key? key,
+    required this.child,
+    required this.color,
+    required this.borderRadius,
+    required this.onPressed,
+  }) : super(key: key);
+
+  final Widget child;
+  final Color color;
+  final double borderRadius;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: null,
       style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(4.0))
+          backgroundColor: color,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
           )
       ),
-      child:const Text(
-        'Sign In With Google',
-        style: TextStyle(
-            color: Colors.black87,
-            fontSize: 15.0
-        ),
-      ),
+      onPressed: () {  },
+      child: child
     );
   }
 }
