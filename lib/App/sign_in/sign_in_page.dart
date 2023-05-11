@@ -33,7 +33,7 @@ class SignInPage extends StatelessWidget {
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(16.0))
+                  borderRadius: BorderRadius.all(Radius.circular(4.0))
                 ) 
             ),
             child:const Text(
