@@ -9,6 +9,7 @@ class SignInPage extends StatelessWidget {
         elevation: 2.0,
       ),
       body: _buildContent(),
+      backgroundColor: Colors.grey[200],
     );
   }
 
@@ -30,7 +31,13 @@ class SignInPage extends StatelessWidget {
           const SizedBox(height: 8.0,),
           ElevatedButton(
             onPressed: _signInWithGoogle,
-            child: const Text('Sign In With Google'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white
+            ),
+            child: const Text(
+                'Sign In With Google',
+              style: TextStyle(color: Colors.black87, fontSize: 15.0),
+            ),
           ),
         ],
       ),
@@ -38,6 +45,6 @@ class SignInPage extends StatelessWidget {
   }
 
   void _signInWithGoogle () {
-
+    // TODO: Auth with Google
   }
 }
