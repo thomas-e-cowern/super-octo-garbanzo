@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_tracker_flutter_course/App/custom_widgets/custom_elevated_button.dart';
 import 'package:time_tracker_flutter_course/App/sign_in/sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
@@ -30,6 +31,12 @@ class SignInPage extends StatelessWidget {
           ),
           const SizedBox(
             height: 48,
+          ),
+          CustomElevatedButton(color: Colors.white,
+              onPressed: () {  },
+              child: Image.asset('images/google-logo.png')),
+          SizedBox(
+            height: 8.0,
           ),
           SignInButton(
             color: Colors.white,
@@ -65,7 +72,11 @@ class SignInPage extends StatelessWidget {
           SizedBox(
             height: 8.0,
           ),
-          SignInButton(text: 'Go Anonymous', color: Colors.lime, textColor: Colors.black, onPressed: () {})
+          SignInButton(
+              text: 'Go Anonymous',
+              color: Colors.lime,
+              textColor: Colors.black,
+              onPressed: () {}),
         ],
       ),
     );
