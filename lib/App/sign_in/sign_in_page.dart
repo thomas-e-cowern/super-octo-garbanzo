@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../custom_widgets/custom_elevated_button.dart';
+
 class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class SignInPage extends StatelessWidget {
                 backgroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(4.0))
-                ) 
+                )
             ),
             child:const Text(
               'Sign In With Google',
@@ -44,6 +46,10 @@ class SignInPage extends StatelessWidget {
             ),
             ),
           ),
+          SizedBox(
+            height: 8,
+          ),
+          CustomElevatedButton()
         ],
       ),
     );
