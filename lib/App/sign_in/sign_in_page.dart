@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_tracker_flutter_course/App/sign_in/sign_in_button.dart';
 
 import '../custom_widgets/custom_elevated_button.dart';
 
@@ -30,14 +31,12 @@ class SignInPage extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          CustomElevatedButton(
+          SignInButton(
             color: Colors.white,
             borderRadius: 4.0,
             onPressed: () {},
-            child: const Text(
-              'Sign In With Facebook',
-              style: TextStyle(color: Colors.black87, fontSize: 15.0),
-            ),
+            text: 'Sign in with Google',
+            textColor: Colors.black87,
           )
         ],
       ),

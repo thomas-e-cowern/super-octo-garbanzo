@@ -8,7 +8,7 @@ class SignInButton extends CustomElevatedButton {
     required Color color,
     required Color textColor,
     required VoidCallback onPressed,
-    required super.borderRadius,
+    super.borderRadius,
 }) : super(
     child: Text(
       text,
