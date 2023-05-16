@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:time_tracker_flutter_course/App/custom_widgets/custom_elevated_button.dart';
 import 'package:time_tracker_flutter_course/App/sign_in/sign_in_button.dart';
+import 'package:time_tracker_flutter_course/App/sign_in/social_sign_in.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -32,28 +32,28 @@ class SignInPage extends StatelessWidget {
           const SizedBox(
             height: 48,
           ),
-          CustomElevatedButton(color: Colors.white,
-              onPressed: () {  },
-              child: Image.asset('images/google-logo.png')),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
-          SignInButton(
+          SocialSignInButton(
             color: Colors.white,
             borderRadius: 4.0,
             onPressed: () {},
             text: 'Sign in with Google',
             textColor: Colors.black87,
+            assetName: 'images/google-logo.png',
           ),
           const SizedBox(
             height: 8.0,
           ),
-          SignInButton(
+          SocialSignInButton(
               text: 'Sign in with Facebook',
               color: const Color(0xFF334D92),
               textColor: Colors.white,
-              onPressed: () {}),
-          SizedBox(
+              onPressed: () {},
+              assetName: 'images/facebook-logo.png',
+          ),
+          const SizedBox(
             height: 8.0,
           ),
           SignInButton(
@@ -61,15 +61,15 @@ class SignInPage extends StatelessWidget {
               color: Colors.teal,
               textColor: Colors.white,
               onPressed: () {}),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
-          Text(
+          const Text(
             'or',
             style: TextStyle(fontSize: 14.0, color: Colors.black87),
             textAlign: TextAlign.center,
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           SignInButton(
